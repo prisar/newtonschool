@@ -1,30 +1,83 @@
 <html>
-    <head>
-        <title>My First Page</title>
-        <script src="app.js">
-            // alert("hello");
-        </script>
-        <style>
-            .box {
-                display: inline-flex;
-                border: 1px;
-                flex-direction: row;
-                justify-content: space-around;
-                height: 100px;
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./appendTextCss.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function(){
+
+        // jQuery methods go here...
+            $("#myparaid").click(function(){
+                // $("p").hide();
+                alert('myparaid clicked!');
+            });
+
+        });
+
+        function checkboxclicked() {
+            console.log(document.getElementById("terms").checked);
+
+            if (document.getElementById("terms").checked) {
+                document.getElementById("submitBtn").disabled = false;  
+            } else {
+                document.getElementById("submitBtn").disabled = true;
             }
-            .flexdemo {
-                border: 1px solid black;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="flexdemo">
-                <div class="box">one</div>
-                <div class="box">two</div>
-                <div class="box">three</div>
-                <div class="box">four</div>
-                <div class="box">five</div>
+        }
+    </script>
+    <style>
+        .btn-pri {
+            background-color: rgb(69, 90, 100);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="center">
+
+        <div class="block2">
+            <div>
+                <h4>
+                    <u> Add Items<span class="badge badge-dark">4</span> </u>
+                </h4>
+                <span>
+                    <div class="form-group">
+                            <label for="usr">Name:</label>
+                            <input class="form-control col-3" id="invalues" type="text">
+                    </div>
+                    
+                    <button onclick="addNewTodo()" class="button">
+                        Add</button>
+                </span>
+            </div>
+            <h4> <u>My To-do List</u></h4>
+            <div class="todo">
+                <ul id="addtodo" class="todolist">
+                    <li>
+                        <input id="terms" class="checkbox-margin" type="checkbox" onclick="checkboxclicked()">
+                        Assignment 6
+
+                        <input type="text">
+                    </li>
+                </ul>
+
+            </div>
+
         </div>
-        
-    </body>
+    </div>
+    <!-- <script src="app.js"></script> -->
+
+<button id="submitBtn" class="btn btn-primary btn-pri" disabled="true">Submit</button>
+
+    <button class="btn btn-primary">
+            Notification <span class="badge badge-danger">2</span>
+    </button>
+
+    <p id="myparaid">some para</p>
+</body>
+
 </html>
