@@ -29,3 +29,5 @@ x(1, 2);
 document.getElementById('aa');
 
 <input name="login"></input>
+
+target.innerHTML 
