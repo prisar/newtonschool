@@ -1,0 +1,55 @@
+html,body{
+    height: 100%;
+    font-family: font-family: 'Lato', sans-serif;
+    background-color: #9fdfcd;
+}
+
+.flex-container{
+    display: flex;
+}
+
+.flex-column{
+    flex-direction: column;
+}
+
+.flex-wrap{
+    flex-wrap: wrap;
+}
+
+.flex-center{
+    justify-content: center;
+    align-items: center;
+}
+
+.title{ 
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: #110133;
+    font-style: bold;
+}
+
+.board-container{
+    height: 100%;
+    width: 100%;
+
+}
+
+.board{
+    width: 468px;
+}
+
+.square{
+    height: 150px;
+    width: 150px;
+    border: 3px solid #baabda;
+    font-size: 80px;
+    text-align: center;
+}
+
+.square:hover{
+    background-color: #d79abc ;
+}
+
+.btn{
+    margin-top: 20px;;
+}
