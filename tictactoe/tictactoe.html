@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="Tac.css">
+        <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+        <title>
+            Tic-Tac-Toe
+        </title>
+        <script src="Toe.js"></script>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    </head>
+
+    <body>
+
+        <div class="board-container flex-container flex-column flex-center">
+            <div class="flex-container">
+                    <div class="title">Tic-Tac-Toe</div>
+            </div>
+            <div class="board flex-container flex-wrap ">
+                <div id="cel11" class="square" onclick="play(this.id);check();"></div>
+                <div id="cel12" class="square" onclick="play(this.id);check();"></div>
+                <div id="cel13" class="square" onclick="play(this.id);check();"></div>
+                <div id="cel21" class="square" onclick="play(this.id);check();"></div>
+                <div id="cel22" class="square" onclick="play(this.id);check();"></div>
+                <div id="cel23" class="square" onclick="play(this.id);check();"></div>
+                <div id="cel31" class="square" onclick="play(this.id);check();"></div>
+                <div id="cel32" class="square" onclick="play(this.id);check();"></div>
+                <div id="cel33" class="square" onclick="play(this.id);check();"></div>
+
+            </div>
+            <input class="btn w3-button w3-indigo" type="button" value="Play Again" onclick="novo();">
+        </div>
+      <div>Result:
+        <div id="result">
+        </div>
+      </div>
+    </body>
+</html>
+
